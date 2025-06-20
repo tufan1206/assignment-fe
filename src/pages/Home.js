@@ -28,7 +28,7 @@ export default function Home() {
     navigate("/"); // back to login
   };
 
-  // 👉 Handle search input
+  // Handle search input
   const handleSearch = async (e) => {
     const keyword = e.target.value;
     setSearch(keyword);
