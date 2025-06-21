@@ -7,7 +7,7 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('https://assignment-be-an4u.vercel.app/api/products/register', form);
+    await axios.post( `${process.env.REACT_APP_API_BASE_URL}/products/register`, form);
     alert("Registered Successfully!");
   };
 
