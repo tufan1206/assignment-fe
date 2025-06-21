@@ -26,7 +26,7 @@ export default function FundDetails() {
   const handleSave = async () => {
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/products/save",
+      `${process.env.REACT_APP_API_BASE_URL}/products/save`,
       {
         schemeCode: fund.meta.scheme_code,
         schemeName: fund.meta.scheme_name,

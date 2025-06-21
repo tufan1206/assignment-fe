@@ -11,7 +11,7 @@ export default function SavedFunds() {
   useEffect(() => {
     const fetchSaved = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products/myfunds", {
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/products/myfunds`, {
           headers: {
             Authorization: token
           }

@@ -8,7 +8,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post('http://localhost:5000/api/products/login', form);
+    const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/products/login`, form);
     console.log(res);
     localStorage.setItem("token", res.data.token);
     localStorage.setItem("name", res.data.user.name);
